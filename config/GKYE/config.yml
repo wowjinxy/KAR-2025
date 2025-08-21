@@ -7,3 +7,10 @@ splits: config/GKYE/splits.txt
 # Change this to match the linker version.
 # See config.example.yml for a list.
 mw_comment_version: 11
+
+# Disable automatic object detection to prevent jump table issues
+detect_objects: false
+# Disable string detection as well to prevent conflicts
+detect_strings: false
+# Enable quick analysis to skip problematic analysis steps
+quick_analysis: true

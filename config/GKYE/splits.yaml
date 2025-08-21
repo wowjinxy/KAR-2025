@@ -1,0 +1,150 @@
+# Kirby Air Ride Decomp Splits (YAML format)
+# Based on function analysis from Ghidra
+# Format: start_address:end_address name
+
+splits:
+  # == SYSTEM/BOOTSTRAP ==
+  - name: "MAIN_.text0"
+    start: "0x80003100"
+    end: "0x800055ff"
+    description: "Bootstrap/init code, standard library functions"
+    contains: ["memset", "memmove", "memcpy", "Entry", "SystemInit"]
+
+  # == MAIN GAME CODE ==
+  - name: "MAIN_.text1"
+    start: "0x80005800"
+    end: "0x8048943f"
+    description: "Main game executable - largest section"
+    
+  # Subsections for better organization:
+  - name: "game_init"
+    start: "0x80005800"
+    end: "0x80008fff"
+    description: "Game initialization and main loop"
+    contains: ["GameMain", "GameLoop", "SetGameMode"]
+    
+  - name: "game_core"
+    start: "0x80009000"
+    end: "0x8001ffff"
+    description: "Core game systems and utilities"
+    
+  - name: "game_objects"
+    start: "0x80020000"
+    end: "0x8003ffff"
+    description: "Game object management, entities"
+    
+  - name: "graphics"
+    start: "0x80040000"
+    end: "0x8007ffff"
+    description: "Graphics, rendering, UI systems"
+    
+  - name: "audio"
+    start: "0x80080000"
+    end: "0x800fffff"
+    description: "Sound and music systems"
+    
+  - name: "game_modes"
+    start: "0x80100000"
+    end: "0x8019ffff"
+    description: "Different game modes, menus"
+    
+  - name: "physics"
+    start: "0x801a0000"
+    end: "0x8023ffff"
+    description: "Physics, collision detection"
+    
+  - name: "ai_gameplay"
+    start: "0x80240000"
+    end: "0x802fffff"
+    description: "AI, gameplay mechanics"
+    
+  - name: "levels"
+    start: "0x80300000"
+    end: "0x8037ffff"
+    description: "Level loading, world management"
+    
+  - name: "sdk_libs"
+    start: "0x80380000"
+    end: "0x803bffff"
+    description: "Dolphin SDK functions"
+    
+  - name: "trk_debug"
+    start: "0x803c0000"
+    end: "0x803dffff"
+    description: "MetroTRK debugging functions"
+    contains: ["TRK_Main", "TRK_InitializeNUB", "TRK_MessageSend"]
+    
+  - name: "memory_mgmt"
+    start: "0x803e0000"
+    end: "0x803fffff"
+    description: "Memory management, heap functions"
+    contains: ["InitDefaultHeap"]
+    
+  - name: "late_systems"
+    start: "0x80400000"
+    end: "0x8048943f"
+    description: "Additional game systems, cleanup"
+
+  # == DATA SECTIONS ==
+  - name: "MAIN_.data2"
+    start: "0x80489440"
+    end: "0x8048945f"
+    description: "Small data section"
+    
+  - name: "MAIN_.data3"
+    start: "0x80489460"
+    end: "0x8048947f"
+    description: "Small data section"
+    
+  - name: "MAIN_.data4"
+    start: "0x80489480"
+    end: "0x80494e5f"
+    description: "Larger data section"
+    
+  - name: "MAIN_.data5"
+    start: "0x80494e60"
+    end: "0x805352ff"
+    description: "Large data section (strings, constants)"
+
+  # == BSS/UNINITIALIZED ==
+  - name: "MAIN_uninitialized0"
+    start: "0x80535300"
+    end: "0x805d50df"
+    description: "Main BSS section"
+    
+  - name: "MAIN_uninitialized1"
+    start: "0x805dd520"
+    end: "0x805de6ff"
+    description: "Additional BSS"
+    
+  - name: "MAIN_uninitialized2"
+    start: "0x805e62e0"
+    end: "0x805e638f"
+    description: "Small BSS section"
+
+  # == RUNTIME DATA ==
+  - name: "MAIN_.data6"
+    start: "0x805d50e0"
+    end: "0x805dd51f"
+    description: "Runtime data"
+    
+  - name: "MAIN_.data7"
+    start: "0x805de700"
+    end: "0x805e62df"
+    description: "Final data section"
+
+# Project metadata
+project:
+  name: "Kirby Air Ride"
+  platform: "GameCube"
+  executable_format: "DOL"
+  description: "Decompilation project for Kirby Air Ride"
+  
+# Notes
+notes:
+  - "Based on function address analysis from Ghidra"
+  - "Some boundaries are estimated and may need refinement"
+  - "SDK functions are scattered throughout but concentrated in certain areas"
+  - "TRK debug functions are clearly clustered around 0x803c0000-0x803dffff"
+  - "Standard library functions (memset, memcpy, etc.) are at the beginning"
+  - "Main game logic starts around 0x80005800"
