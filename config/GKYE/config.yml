@@ -14,3 +14,221 @@ detect_objects: false
 detect_strings: false
 # Enable quick analysis to skip problematic analysis steps
 quick_analysis: true
+
+# Object configurations for split objects
+objects:
+  # Game Mode Objects
+  gmmain.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmglobal.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmautodemo.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmracecommon.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmracenormal.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmdialogue.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmdialoguesub.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmdialoguestatus.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmspecialmovie.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmclearchecker.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmviconfigure.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  gmlanmenu.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  
+  # Library Objects
+  lbairride.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  
+  # Air Ride C++ Objects
+  a2d_game_lib.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_gamehistory.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_cpu_kirby.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_kirbyjointanim.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_lavabomb.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_grindrail.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_bg3000.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_bg4000.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_bg5000.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_bg8000.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_kurakko.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_game_audio.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_soundhandle.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_game_effect.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_effecthandle.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_wipeeffect.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_effect_slideblur.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_kirbydisp.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  a2d_refract.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  
+  # Graphics Objects
+  grcity1.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  
+  # Dolphin SDK Objects
+  dolphin_sdk_other.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_db.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_dsp.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_dvd.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_gx.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_mtx.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_mtxvec.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_mtx44.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_vec.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_os.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_pad.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_vi.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_ai.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_ar.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_arq.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_card.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_si.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_exi.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_ax.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_mix.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  dolphin_sdk_synth.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  
+  # Text/Data Objects (use default settings)
+  text_80060ED0.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  db_800AD79C.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  smsoundtest.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_800AF474.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8010F854.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_801166B4.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_801D443C.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8028B974.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8034D384.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_803AFAC8.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8042AD44.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8045DAE4.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_8047DB6C.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
+  text_80482598.o:
+    compiler: mwcc
+    flags: [-O4,p, -nodefaults, -fp, hard, -Cpp_exceptions, off, -enum, int, -fp_contract, on, -inline, auto]
