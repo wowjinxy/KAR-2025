@@ -42,3 +42,24 @@ ninja  # Build and verify
 - E3 build flag support (gE3BuildFlag)
 - Memory management optimizations for different console configurations
 - Auto-demo system for title screen idle timeout
+
+## Top Ride (a2d) System
+- **Separate C++ Implementation** - Independent from main C-based game
+- **Comprehensive Racing System** - 20+ C++ source files identified
+- **Independent Data Management** - Separate file structure with "A2" prefix
+- **Advanced Features** - AI, effects, audio, and multiple track systems
+- **Documentation**: See `TOP_RIDE_ANALYSIS.md` for complete analysis
+
+## Game Manager (gm) Systems
+- **Core Game Architecture** - 15+ identified gm systems
+- **Comprehensive Management** - Mode, scene, racing, dialogue, and media systems
+- **Advanced Audio Management** - FGM and BGM systems with extensive controls
+- **Robust Error Handling** - Comprehensive validation and debugging features
+- **Documentation**: See `GAME_MANAGER_SYSTEMS.md` for complete analysis
+
+## Singleton Systems Architecture
+- **Massive C++ Architecture** - 80+ singleton patterns identified
+- **Sophisticated Design Patterns** - Template-based singleton implementation
+- **Professional Game Engine** - Manager, Container, and Factory patterns
+- **Advanced Resource Management** - Centralized state and resource coordination
+- **Documentation**: See `SINGLETON_SYSTEMS_ANALYSIS.md` for complete analysis

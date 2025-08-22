@@ -117,6 +117,9 @@ This project uses [decomp-toolkit](https://github.com/encounter/decomp-toolkit) 
 - [**Object Analysis**](docs/OBJECT_ANALYSIS.md) - Detailed analysis of individual object files
 - [**LAN System Analysis**](docs/LAN_ANALYSIS.md) - Multiplayer networking system documentation
 - [**HVQM4 Video System**](docs/HVQM4_ANALYSIS.md) - Video codec system analysis
+- [**Top Ride (a2d) System**](docs/TOP_RIDE_ANALYSIS.md) - C++ racing game mode analysis
+- [**Game Manager Systems**](docs/GAME_MANAGER_SYSTEMS.md) - Core game architecture and management systems
+- [**Singleton Systems Architecture**](docs/SINGLETON_SYSTEMS_ANALYSIS.md) - C++ singleton patterns and design architecture
 - [**Assert String Analysis**](docs/ASSERT_ANALYSIS.md) - Source file mapping and function identification
 - [**SDK Functions**](docs/SDK_FUNCTIONS.md) - Identified Dolphin SDK functions
 - [**TODO Tasks**](docs/TODO_TASKS.md) - Current and completed tasks
@@ -148,8 +151,11 @@ KAR-2025/
 
 ### Game Systems Analyzed
 - **Core Game Loop** - Main game initialization and management
+- **Game Manager Systems** - 15+ core systems for mode, scene, racing, and audio management
+- **Singleton Systems Architecture** - 80+ C++ singleton patterns with professional design architecture
 - **LAN Multiplayer** - 12-state menu system, network functions, 4-player support
 - **HVQM4 Video System** - Nintendo's proprietary video codec (version 1.5)
+- **Top Ride (a2d) System** - C++ racing game mode with AI, effects, and audio
 - **Memory Management** - Arena-based allocation, debug level support
 - **Input System** - Pad initialization, rumble support, input handling
 
