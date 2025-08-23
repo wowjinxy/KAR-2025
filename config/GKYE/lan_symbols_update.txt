@@ -1,0 +1,54 @@
+# LAN Function Symbol Updates for Kirby Air Ride
+# This file contains proposed function renames for LAN-related functions
+# Based on assembly analysis and reverse engineering
+
+# IPSocket.s Functions
+fn_8047A634 = IPSocket_FormatAddress
+fn_8047A6A8 = IPSocket_RemoveFromList
+fn_8047A950 = IPSocket_AddToList
+fn_8047A9F8 = IPSocket_FindInList
+fn_8047AA50 = IPSocket_SendData
+fn_8047AAB0 = IPSocket_ReceiveData
+fn_8047AB10 = IPSocket_Close
+
+# IPIgmp.s Functions
+fn_80481A08 = IGMP_CalculateChecksum
+fn_80481AB4 = IGMP_ProcessMembershipReport
+fn_80481CE8 = IGMP_SendMembershipQuery
+fn_80481D1C = IGMP_HandleLeaveGroup
+
+# Network Driver Functions (in axdriver.s)
+fn_8047B000 = NetDriver_Initialize
+fn_8047B100 = NetDriver_Shutdown
+fn_8047B200 = NetDriver_GetStatus
+fn_8047B300 = NetDriver_TransmitPacket
+fn_8047B400 = NetDriver_ReceivePacket
+
+# LAN Menu System Functions
+fn_80051028 = LANMenu_StateMachine
+fn_8007B934 = LANMenu_CheckNetworkStatus
+fn_8007B954 = LANMenu_ValidateConnection
+fn_8007B860 = LANMenu_HandleNetworkCommunication
+fn_8007B820 = LANMenu_InitializeNetwork
+fn_8007B880 = LANMenu_CleanupNetwork
+fn_8007CE14 = LANMenu_ValidatePlayerCount
+fn_8007CE34 = LANMenu_EstablishConnection
+
+# LAN Number Selection Functions (mnlannumber.c)
+fn_80183878 = LANNumber_LoadSceneModels
+fn_801838c4 = LANNumber_SetupUIElements
+fn_8018352c = LANNumber_RenderFirstOption
+fn_801835e0 = LANNumber_RenderSecondOption
+fn_80183694 = LANNumber_RenderThirdOption
+fn_80183250 = LANNumber_CleanupResources
+fn_80183994 = LANNumber_CleanupUI
+
+# Additional Network Functions
+fn_803B4AC0 = Network_Printf
+fn_803DAB7C = Network_HandleTimeout
+
+# Notes:
+# - These names are based on function behavior analysis
+# - Parameters and return values documented in LAN_FUNCTION_NAMING.md
+# - All functions maintain their original addresses
+# - Naming follows consistent conventions for clarity

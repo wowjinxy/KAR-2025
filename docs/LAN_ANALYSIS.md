@@ -161,6 +161,36 @@ State 10 (Return) ← State 9 (Results) ← State 8 (Race) ← State 7 (Start) �
 - **Line Number Tracking** - Detailed error location information
 - **State Validation** - Comprehensive state machine validation
 
+## Function Naming and Documentation
+
+### Improved Function Names
+Based on assembly analysis and reverse engineering, the following function names have been proposed to improve code readability:
+
+#### Network Layer Functions
+- **IPSocket Functions**: `IPSocket_FormatAddress`, `IPSocket_SendData`, `IPSocket_ReceiveData`
+- **IGMP Protocol**: `IGMP_CalculateChecksum`, `IGMP_ProcessMembershipReport`
+- **Network Driver**: `NetDriver_Initialize`, `NetDriver_TransmitPacket`
+
+#### LAN Menu Functions
+- **State Management**: `LANMenu_StateMachine`, `LANMenu_CheckNetworkStatus`
+- **Connection Handling**: `LANMenu_InitializeNetwork`, `LANMenu_EstablishConnection`
+- **Player Management**: `LANMenu_ValidatePlayerCount`
+
+#### UI Functions
+- **Number Selection**: `LANNumber_LoadSceneModels`, `LANNumber_SetupUIElements`
+- **Rendering**: `LANNumber_RenderFirstOption`, `LANNumber_RenderSecondOption`
+
+### Documentation Files
+- **`LAN_FUNCTION_NAMING.md`**: Comprehensive function analysis and naming
+- **`lan_symbols_update.txt`**: Proposed symbol renames for symbols.txt
+- **Updated `LAN_ANALYSIS.md`**: Enhanced with new function names
+
+### Benefits of Improved Naming
+- **Clearer Code Understanding**: Function names indicate purpose and behavior
+- **Easier Maintenance**: Developers can quickly identify relevant functions
+- **Better Documentation**: Names serve as inline documentation
+- **Consistent Conventions**: Standardized naming across all LAN modules
+
 ## Summary
 
 Kirby Air Ride's LAN system is a sophisticated multiplayer implementation that provides:
@@ -173,6 +203,13 @@ Kirby Air Ride's LAN system is a sophisticated multiplayer implementation that p
 
 The system demonstrates Nintendo's expertise in creating reliable, low-latency multiplayer experiences for the GameCube platform.
 
+### Next Steps for LAN Development
+1. **Apply Function Renames**: Use the proposed names in symbols.txt
+2. **Add Inline Comments**: Document assembly code with function purposes
+3. **Analyze Network Traffic**: Study packet patterns and optimization opportunities
+4. **Document Protocols**: Create detailed specifications for network protocols
+5. **Performance Analysis**: Measure and optimize network performance
+
 ## mnlannumber.c Analysis
 
 ### Overview
@@ -181,39 +218,39 @@ The `mnlannumber.c` file handles the player number/count selection interface for
 ### Key Functions
 
 #### UI Setup and Management
-- **`FUN_80183878`** @ `0x80183878` - Scene Model Loader
+- **`LANNumber_LoadSceneModels`** @ `0x80183878` (formerly `FUN_80183878`)
   - Loads `ScMenLanNumber_scene_models` 
   - Initializes the LAN player number selection screen
   - Sets up the 3D scene for the number selection interface
 
-- **`FUN_801838c4`** @ `0x801838c4` - UI Element Setup  
+- **`LANNumber_SetupUIElements`** @ `0x801838c4` (formerly `FUN_801838c4`)
   - Sets up 4 UI elements (indices 8, 9, 10, 4)
   - Stores elements at offsets 0xc, 0x10, 0x14, 0x18
   - Likely represents different player count options (2P, 3P, 4P, etc.)
   - Configures UI positioning and properties
 
 #### UI Element Renderers
-- **`FUN_8018352c`** @ `0x8018352c` - First Number Option Renderer
+- **`LANNumber_RenderFirstOption`** @ `0x8018352c` (formerly `FUN_8018352c`)
   - Renders UI element at offset 0xc (likely "2 Players")
   - References `mnlannumber.c` line 117
   - Handles 3D positioning and display
 
-- **`FUN_801835e0`** @ `0x801835e0` - Second Number Option Renderer  
+- **`LANNumber_RenderSecondOption`** @ `0x801835e0` (formerly `FUN_801835e0`)
   - Renders UI element at offset 0x10 (likely "3 Players")
   - Same line reference as above (line 117)
   - Parallel implementation to first renderer
 
-- **`FUN_80183694`** @ `0x80183694` - Third Number Option Renderer
+- **`LANNumber_RenderThirdOption`** @ `0x80183694` (formerly `FUN_80183694`)
   - Renders UI element at offset 0x14 (likely "4 Players")
   - Same line reference as above (line 117)
   - Completes the set of player count options
 
 #### Cleanup Functions
-- **`FUN_80183250`** @ `0x80183250` - Resource Cleanup
+- **`LANNumber_CleanupResources`** @ `0x80183250` (formerly `FUN_80183250`)
   - Cleans up allocated resources
   - Frees memory at offset 0x114c
 
-- **`FUN_80183994`** @ `0x80183994` - UI Cleanup
+- **`LANNumber_CleanupUI`** @ `0x80183994` (formerly `FUN_80183994`)
   - Cleans up UI elements 
   - Frees memory at offset 0x1160
 
