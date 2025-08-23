@@ -63,3 +63,10 @@ ninja  # Build and verify
 - **Professional Game Engine** - Manager, Container, and Factory patterns
 - **Advanced Resource Management** - Centralized state and resource coordination
 - **Documentation**: See `SINGLETON_SYSTEMS_ANALYSIS.md` for complete analysis
+
+## Slide Blur Effect System
+- **Advanced Visual Effects** - Sophisticated motion blur system
+- **Performance Optimized** - Object pooling and batch rendering
+- **Multi-Point Blur** - Front, Rear, Left, Right blur generation
+- **Top Ride Integration** - Part of a2d effect system
+- **Documentation**: See `SLIDE_BLUR_EFFECT_SYSTEM_ANALYSIS.md` for complete analysis
