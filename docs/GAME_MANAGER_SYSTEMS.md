@@ -191,3 +191,4 @@ The Game Manager (gm) systems in Kirby Air Ride represent a **comprehensive, wel
 This architecture showcases HAL Laboratory's expertise in creating maintainable, scalable game systems that can handle complex racing gameplay, multiple game modes, and extensive audio/visual content while maintaining code quality and debugging capabilities.
 
 The gm systems form the **foundation layer** of Kirby Air Ride, providing the infrastructure that all other game systems (LAN, HVQM4, Top Ride) build upon.
+

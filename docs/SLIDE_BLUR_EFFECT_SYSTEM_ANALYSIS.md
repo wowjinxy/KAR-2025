@@ -324,3 +324,4 @@ The **Slide Blur Effect System** in Kirby Air Ride represents a **sophisticated,
 This system showcases **HAL Laboratory's expertise** in creating **high-quality, performance-optimized visual effects** that enhance the racing gameplay experience while maintaining smooth performance on the GameCube platform.
 
 The slide blur system is a **key component** of Kirby Air Ride's visual effects architecture, providing **professional-grade motion blur effects** that significantly enhance the game's visual appeal and gameplay immersion.
+
